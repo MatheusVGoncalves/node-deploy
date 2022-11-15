@@ -1,13 +1,13 @@
-require("dotenv/config");
+import "dotenv/config";
 
-const express = require("express");
-const routes = require("./routes");
+import express, { json } from "express";
+import routes from "./routes";
 
-require("./database");
+import "./database";
 
 const app = express();
 
-app.use(express.json());
+app.use(json());
 app.use(routes);
 
 app.listen(process.env.PORT || 3333);
