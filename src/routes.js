@@ -19,7 +19,7 @@ routes.delete("/users/:user_id/techs", TechController.delete);
 
 routes.get("/report", ReportController.show);
 
-routes.get("teste", (req, res) => {
+routes.get("/teste", (req, res) => {
   res.send("Olá mundo");
 });
 
